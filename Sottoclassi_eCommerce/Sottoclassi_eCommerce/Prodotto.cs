@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace eCommerce
+namespace Sottoclassi_eCommerce
 {
     class Prodotto : IEquatable<Prodotto>
     {
@@ -38,6 +38,7 @@ namespace eCommerce
             this.identificativo = identificativo;
             this.prezzo = prezzo;
         }
+
         public bool Equals(Prodotto other)
         {
             if (other == null)

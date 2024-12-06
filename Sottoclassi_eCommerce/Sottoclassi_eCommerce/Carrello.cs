@@ -1,6 +1,6 @@
 ﻿using Sottoclassi_eCommerce;
 
-namespace eCommerce
+namespace Sottoclassi_eCommerce
 {
     class Carrello
     {
