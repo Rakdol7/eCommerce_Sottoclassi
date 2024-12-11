@@ -8,16 +8,22 @@ namespace Sottoclassi_eCommerce
 {
     internal class ProdottoElettronico: Prodotto
     {
-        private int sconto;
+        private double sconto;
 
-        public int Sconto
+        public double Sconto
         {
             get { return sconto; }
         }
 
-        public ProdottoElettronico(string marca, string modello, string identificativo, double prezzo, int sconto) : base(marca, modello, identificativo, prezzo)
+        public ProdottoElettronico(string marca, string modello, string identificativo, double prezzo) : base(marca, modello, identificativo, prezzo)
         {
-            this.sconto = sconto;
+            sconto = 0.9;
+            PrezzoEffettivo = CalcolaPrezzoEffettivo();
+        }
+
+        override public double CalcolaPrezzoEffettivo()
+        {
+            return Prezzo * sconto;
         }
     }
 }

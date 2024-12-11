@@ -12,6 +12,7 @@ namespace Sottoclassi_eCommerce
         private string modello;
         private double prezzo;
         private string identificativo;
+        private double prezzoEffettivo;
 
         public string Marca
         {
@@ -31,12 +32,24 @@ namespace Sottoclassi_eCommerce
             get { return identificativo; }
         }
 
+        public double PrezzoEffettivo
+        {
+            get { return prezzoEffettivo; }
+            set { prezzoEffettivo = value; }
+        }
+
         public Prodotto(string marca, string modello, string identificativo, double prezzo)
         {
             this.marca = marca;
             this.modello = modello;
             this.identificativo = identificativo;
             this.prezzo = prezzo;
+            prezzoEffettivo = CalcolaPrezzoEffettivo();
+        }
+
+        virtual public double CalcolaPrezzoEffettivo()
+        {
+            return prezzo;
         }
 
         public bool Equals(Prodotto other)
