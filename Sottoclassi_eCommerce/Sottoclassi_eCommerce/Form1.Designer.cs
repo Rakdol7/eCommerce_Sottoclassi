@@ -76,6 +76,7 @@
             Aggiungi.TabIndex = 2;
             Aggiungi.Text = "AGGIUNGI PRODOTTO";
             Aggiungi.UseVisualStyleBackColor = false;
+            Aggiungi.Click += Aggiungi_Click;
             // 
             // Svuota
             // 
@@ -87,6 +88,7 @@
             Svuota.TabIndex = 3;
             Svuota.Text = "SVUOTA";
             Svuota.UseVisualStyleBackColor = false;
+            Svuota.Click += Svuota_Click;
             // 
             // Rimuovi
             // 
@@ -97,6 +99,7 @@
             Rimuovi.TabIndex = 4;
             Rimuovi.Text = "RIMUOVI PRODOTTO";
             Rimuovi.UseVisualStyleBackColor = false;
+            Rimuovi.Click += Rimuovi_Click;
             // 
             // Salva
             // 
@@ -161,32 +164,38 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(107, 130);
+            comboBox1.Items.AddRange(new object[] { "EA-FC25-69", "Nike-Felpa-60", "Blasetti-Quaderno-10" });
+            comboBox1.Location = new Point(53, 130);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
+            comboBox1.Size = new Size(150, 23);
             comboBox1.TabIndex = 11;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // comboBox2
             // 
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(241, 130);
+            comboBox2.Items.AddRange(new object[] { "Melinda-Granny Smith-3", "Chiquita-Banana-4", "Barilla-Fusilli-2" });
+            comboBox2.Location = new Point(209, 130);
             comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(121, 23);
+            comboBox2.Size = new Size(153, 23);
             comboBox2.TabIndex = 12;
+            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
             // comboBox3
             // 
             comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(375, 130);
+            comboBox3.Items.AddRange(new object[] { "Nvidia-RTX 3090-500", "Phillips-270v3-100", "Oppo-A58-300" });
+            comboBox3.Location = new Point(368, 130);
             comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(121, 23);
+            comboBox3.Size = new Size(152, 23);
             comboBox3.TabIndex = 13;
+            comboBox3.SelectedIndexChanged += comboBox3_SelectedIndexChanged;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(107, 112);
+            label6.Location = new Point(53, 112);
             label6.Name = "label6";
             label6.Size = new Size(114, 15);
             label6.TabIndex = 14;
@@ -196,7 +205,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(241, 112);
+            label7.Location = new Point(209, 112);
             label7.Name = "label7";
             label7.Size = new Size(130, 15);
             label7.TabIndex = 15;
@@ -205,7 +214,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(375, 112);
+            label8.Location = new Point(368, 112);
             label8.Name = "label8";
             label8.Size = new Size(133, 15);
             label8.TabIndex = 16;
