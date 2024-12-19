@@ -125,27 +125,27 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(564, 358);
+            label2.Location = new Point(537, 358);
             label2.Name = "label2";
-            label2.Size = new Size(100, 15);
+            label2.Size = new Size(145, 15);
             label2.TabIndex = 7;
-            label2.Text = "PREZZO INTERO:";
+            label2.Text = "TOTALE PREZZO INTERO:";
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(564, 387);
+            label3.Location = new Point(519, 387);
             label3.Name = "label3";
-            label3.Size = new Size(118, 15);
+            label3.Size = new Size(163, 15);
             label3.TabIndex = 8;
-            label3.Text = "PREZZO SCONTATO:";
+            label3.Text = "TOTALE PREZZO SCONTATO:";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(666, 358);
+            label4.Location = new Point(684, 358);
             label4.Name = "label4";
             label4.Size = new Size(40, 15);
             label4.TabIndex = 9;
@@ -174,7 +174,7 @@
             // comboBox2
             // 
             comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Melinda-Granny Smith-3", "Chiquita-Banana-4", "Barilla-Fusilli-2" });
+            comboBox2.Items.AddRange(new object[] { "Melinda-Granny Smith-4", "Chiquita-Banana-4", "Barilla-Fusilli-2" });
             comboBox2.Location = new Point(209, 130);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(153, 23);
@@ -197,7 +197,7 @@
             label6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label6.Location = new Point(53, 112);
             label6.Name = "label6";
-            label6.Size = new Size(114, 15);
+            label6.Size = new Size(116, 15);
             label6.TabIndex = 14;
             label6.Text = "PRODOTTI GENERICI";
             // 
@@ -207,7 +207,7 @@
             label7.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label7.Location = new Point(209, 112);
             label7.Name = "label7";
-            label7.Size = new Size(130, 15);
+            label7.Size = new Size(133, 15);
             label7.TabIndex = 15;
             label7.Text = "PRODOTTI ALIMENTARI";
             // 
@@ -216,7 +216,7 @@
             label8.AutoSize = true;
             label8.Location = new Point(368, 112);
             label8.Name = "label8";
-            label8.Size = new Size(133, 15);
+            label8.Size = new Size(137, 15);
             label8.TabIndex = 16;
             label8.Text = "PRODOTTI ELETTRONICI";
             // 
