@@ -1,3 +1,6 @@
+using System.Text.Json;
+using System.Windows.Forms;
+
 namespace Sottoclassi_eCommerce
 {
     public partial class Form1 : Form
@@ -49,7 +52,7 @@ namespace Sottoclassi_eCommerce
         private void Aggiungi_Click(object sender, EventArgs e)
         {
             carrello.aggiungiProdotto(prodotto);
-            Carrello.Items.Add(prodotto.Marca + " " + prodotto.Modello + " " + prodotto.PrezzoEffettivo+"€");
+            Carrello.Items.Add(prodotto.Marca + " " + prodotto.Modello + " " + prodotto.PrezzoEffettivo + "€");
             label4.Text = Convert.ToString(prodotto.Prezzo + Convert.ToDouble(label4.Text));
             label5.Text = Convert.ToString(prodotto.PrezzoEffettivo + Convert.ToDouble(label5.Text));
 
@@ -70,6 +73,43 @@ namespace Sottoclassi_eCommerce
             Carrello.Items.Remove(Carrello.SelectedItem);
             label4.Text = Convert.ToString(Convert.ToDouble(label4.Text) - prodotto.Prezzo);
             label5.Text = Convert.ToString(Convert.ToDouble(label5.Text) - prodotto.PrezzoEffettivo);
+        }
+
+        private void Salva_Click(object sender, EventArgs e)
+        {
+            string file = "carrello.json";
+            string stringa = JsonSerializer.Serialize(carrello.Prodotti);
+            File.WriteAllText(file, stringa);
+            MessageBox.Show("Carrello salvato");
+        }
+
+        private void Carica_Click(object sender, EventArgs e)
+        {
+            string file = "carrello.json";
+            if (File.Exists(file))
+            {
+                string stringa = File.ReadAllText(file);
+                List<Prodotto> prodotti = JsonSerializer.Deserialize<List<Prodotto>>(stringa);
+                carrello.Prodotti = prodotti;
+                id = carrello.Prodotti.Count + 1;
+                label4.Text = Convert.ToString(0);
+                label5.Text = Convert.ToString(0);
+                foreach (Prodotto prodotto in carrello.Prodotti)
+                {
+                    label4.Text = Convert.ToString(Convert.ToDouble(label4.Text) + prodotto.Prezzo);
+                    label5.Text = Convert.ToString(Convert.ToDouble(label5.Text) + prodotto.PrezzoEffettivo);
+                }
+                Carrello.Items.Clear();
+                foreach (var prodotto in carrello.Prodotti)
+                {
+                    Carrello.Items.Add(prodotto.Marca + " " + prodotto.Modello + " " + prodotto.PrezzoEffettivo + "€");
+                }
+                MessageBox.Show("Carrello caricato");
+            }
+            else
+            {
+                MessageBox.Show("File non esistente");
+            }
         }
     }
 }

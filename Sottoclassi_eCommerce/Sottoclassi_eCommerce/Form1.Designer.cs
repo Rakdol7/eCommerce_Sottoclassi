@@ -110,6 +110,7 @@
             Salva.TabIndex = 5;
             Salva.Text = "SALVA CARRELLO";
             Salva.UseVisualStyleBackColor = false;
+            Salva.Click += Salva_Click;
             // 
             // Carica
             // 
@@ -120,6 +121,7 @@
             Carica.TabIndex = 6;
             Carica.Text = "CARICA CARRELLO";
             Carica.UseVisualStyleBackColor = false;
+            Carica.Click += Carica_Click;
             // 
             // label2
             // 
@@ -197,7 +199,7 @@
             label6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label6.Location = new Point(53, 112);
             label6.Name = "label6";
-            label6.Size = new Size(116, 15);
+            label6.Size = new Size(114, 15);
             label6.TabIndex = 14;
             label6.Text = "PRODOTTI GENERICI";
             // 
@@ -207,7 +209,7 @@
             label7.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label7.Location = new Point(209, 112);
             label7.Name = "label7";
-            label7.Size = new Size(133, 15);
+            label7.Size = new Size(130, 15);
             label7.TabIndex = 15;
             label7.Text = "PRODOTTI ALIMENTARI";
             // 
@@ -216,7 +218,7 @@
             label8.AutoSize = true;
             label8.Location = new Point(368, 112);
             label8.Name = "label8";
-            label8.Size = new Size(137, 15);
+            label8.Size = new Size(133, 15);
             label8.TabIndex = 16;
             label8.Text = "PRODOTTI ELETTRONICI";
             // 

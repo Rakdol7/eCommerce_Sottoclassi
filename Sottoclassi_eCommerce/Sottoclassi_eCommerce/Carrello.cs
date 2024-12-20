@@ -11,6 +11,7 @@ namespace Sottoclassi_eCommerce
         public List<Prodotto> Prodotti
         {
             get { return prodotti; }
+            set {  prodotti = value; }
         }
         public string Identificativo
         {
